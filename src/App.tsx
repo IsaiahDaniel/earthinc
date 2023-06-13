@@ -1,12 +1,15 @@
+import { Route, Routes } from 'react-router-dom'
+import { Roadmap, Home} from './pages'
 import './App.css'
-import Home from './pages/Home'
+
 
 function App() {
 
   return (
-    <>
-      <Home/>
-    </>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/roadmap' element={<Roadmap/>}/>
+    </Routes>
   )
 }
 

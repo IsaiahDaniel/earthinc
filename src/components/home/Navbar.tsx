@@ -5,10 +5,10 @@ import Button from '../global/Button'
 type Props = {}
 
 const navList = [
-    { name: 'About', link: ''},
-    { name: 'Roadmap', link: ''},
-    { name: 'FAQs', link: ''},
-    { name: 'NFT marketplace', link: ''},
+    { name: 'About', link: '/'},
+    { name: 'Roadmap', link: '/roadmap'},
+    { name: 'FAQs', link: '/'},
+    { name: 'NFT marketplace', link: '/'},
 ]
 
 const navbar = (props: Props) => {
