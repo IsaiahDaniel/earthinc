@@ -1,17 +1,34 @@
-import React from 'react'
 import { heroImg1, heroImg2, heroImg3, arrow, vidoe} from '../../assets/home'
 import Button from '../global/Button'
+import { Carousel } from "@material-tailwind/react";
 
 type Props = {}
 
 const About = (props: Props) => {
   return (
     <div className={`bg-mobileTopBgImg lg:bg-topBgImg h-[2264px] bg-cover bg-no-repeat w-full px-5 lg:px-10`}>
-      <div className='flex justify-center items-center gap-10 py-10'>
+      <div className='hidden md:flex justify-center items-center gap-10 py-10'>
         <img src={heroImg1} alt="" className='hidden lg:inline-block' />
         <img src={heroImg2} alt="" />
         <img src={heroImg3} alt="" className='hidden lg:inline-block' />
       </div>
+      
+      {/* Carousel On mobile */}
+      <div className="w-full py-10 mx-auto md:hidden">
+        <Carousel
+          className="rounded-xl"
+          transition={{ duration: 2 }}
+          loop={true}
+          autoplay={true}
+          prevArrow={() => null}
+          nextArrow={() => null}
+        >
+          <img src={heroImg1} alt="" className='w-full' />
+            <img src={heroImg2} alt="" className='w-full' />
+            <img src={heroImg3} alt="" className='w-full' />
+        </Carousel>  
+      </div>
+
       <div className='flex flex-col items-center bg-[#FAF9FF] px-4 lg:px-20 2xl:px-28 py-10 text-[#1E0734] gap-8 font-["Poppins"] rounded-xl'>
         <h2 className='text-[28px] lg:text-[85px] font-light leading-none'>
           w<span className='text-[38px] lg:text-[100px]'>E</span> appreciate <span className='font-bold'>Art</span> <span className='font-[275]'><br /> LOVE</span> <span className='font-semibold'>sHare</span> <span className='text-[12px] lg:text-[33px]'>and</span> <span className='font-semibold'>  Express</span> <span className='text-[12px] lg:text-[32px]'>Art in its</span> <span className='font-bold'>Au</span>thenti<span className='font-bold'>city</span>
