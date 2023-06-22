@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { logo, menu } from '../../assets/home'
+import { menu } from '../../assets/home'
 import Button from '../global/Button'
 import { useState } from 'react';
 

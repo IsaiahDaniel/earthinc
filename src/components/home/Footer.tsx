@@ -1,22 +1,11 @@
-import React from 'react'
 import Button from '../global/Button'
-import { Link } from 'react-router-dom'
-import { footerLogo } from '../../assets/home'
 import FooterSocials from './FooterSocials'
 
-const socials = [
-  {name: 'Twitter', link: 'https://twitter.com'},
-  {name: 'Discord', link: 'https://twitter.com'},
-  {name: 'Facebook', link: 'https://facebook.com'},
-  {name: 'Youtube', link: 'https://youtube.com'},
-  {name: 'Instagram', link: 'https://instagram.com'},
-  {name: 'Tiktok', link: 'https://tiktok.com'},
-]
 type Props = {}
 
 const Footer = (props: Props) => {
   return (
-    <div className={`flex flex-col relative pt-36 md:pt-48 text-[#fff] bg-mobileFooterBgImg lg:bg-footerBgImg h-[966px] md:h-[1366px] bg-contain bg-no-repeat w-full px-5 lg:px-10`}>
+    <div className={`flex flex-col relative pt-36 md:pt-48 text-[#fff] bg-mobileFooterBgImg lg:bg-footerBgImg h-[966px] md:h-[1366px] bg-cover bg-no-repeat w-full px-5 lg:px-10`}>
         <div className='w-[90%] md:my-20 mx-auto'>
             <div className="flex flex-col leading-none w-full lg:w-[60%]">
               <h1 className='text-[32px] lg:text-6xl font-medium '>Did someone</h1>
@@ -29,7 +18,6 @@ const Footer = (props: Props) => {
                 <Button buttonType='submit' text='SUBMIT'/>
             </form>
         </div>
-        {/* <div className='w-[90%] rounded-3xl p-16' style={{background: 'linear-gradient(137.25deg, #EA6EE7 -20.44%, #FD68E3 11.72%, #B66FFA 45.25%, #7668FD 76.73%, #7D2AE7 110.95%)'}}> */}
         <FooterSocials/>
     </div>
   )

@@ -1,4 +1,3 @@
-import React from 'react'
 import Marquee from "react-fast-marquee";
 import {circledImg} from '../../assets/home'
 import Button from '../global/Button';
