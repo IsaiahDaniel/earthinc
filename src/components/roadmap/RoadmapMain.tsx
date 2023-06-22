@@ -1,4 +1,3 @@
-import React from 'react'
 import frame1 from '../../assets/roadmap/frame1.svg'
 import frame2 from '../../assets/roadmap/frame2.svg'
 import frame3 from '../../assets/roadmap/frame3.svg'

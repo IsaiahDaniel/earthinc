@@ -1,5 +1,5 @@
 import { About, Faq, Footer, Hero, Navbar, Partners, Team, Values, Why } from '../components/home'
-import { logo, menu } from '../assets/home'
+import { logo } from '../assets/home'
 
 
 type Props = {}

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Navbar } from '../home'
 import { footerLogo } from '../../assets/home'
 
