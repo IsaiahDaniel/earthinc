@@ -5,3 +5,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Your other styles */
+
+img {
+  /* width: 100px;
+  height: 100px; */
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  z-index: 1; /* Lower z-index for non-focused images */
+}
+
+img.focused {
+  /* width: 150px; 
+  height: 150px; */
+  z-index: 2; /* Higher z-index for focused image */
+  transform: scale(1.1); /* Scale effect for focused image */
+}
+
+/* Other styles */
