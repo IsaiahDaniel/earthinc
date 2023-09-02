@@ -12,18 +12,44 @@ const About = (props: Props) => {
   //   setFocusedImage(image);
   // };
 
+  // const images = [heroImg1, heroImg2, heroImg3];
+  // const [focusedImageIndex, setFocusedImageIndex] = useState(0);
+
+  // useEffect(() => {
+  //   // Set up interval to rotate images every 2 seconds
+  //   const interval = setInterval(() => {
+  //     setFocusedImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  //   }, 2000);
+
+  //   // Clean up interval on component unmount
+  //   return () => clearInterval(interval);
+  // }, [images.length]);
+
+  const shuffleArray = (array: any) => {
+    // Create a new array by shuffling the input array
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [
+        shuffledArray[j],
+        shuffledArray[i],
+      ];
+    }
+    return shuffledArray;
+  };
   const images = [heroImg1, heroImg2, heroImg3];
-  const [focusedImageIndex, setFocusedImageIndex] = useState(0);
+
+  const [shuffledImages, setShuffledImages] = useState(shuffleArray(images));
 
   useEffect(() => {
-    // Set up interval to rotate images every 2 seconds
+    // Set up interval to shuffle images every 2 seconds
     const interval = setInterval(() => {
-      setFocusedImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setShuffledImages(shuffleArray(images));
     }, 2000);
 
     // Clean up interval on component unmount
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images]);
 
   return (
     <div
@@ -60,13 +86,24 @@ const About = (props: Props) => {
         />
       </div> */}
 
-      <div className="hidden md:flex justify-center items-center gap-10 py-10">
+      {/* <div className="hidden md:flex justify-center items-center gap-10 py-10">
         {images.map((image, index) => (
           <img
             key={index}
             src={image}
             alt=""
             className={index === focusedImageIndex ? "focused" : ""}
+          />
+        ))}
+      </div> */}
+
+      <div className="hidden md:flex justify-center items-center gap-10 py-10">
+        {shuffledImages.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt=""
+            className={`hero-image ${index === 1 ? "focused" : ""}`}
           />
         ))}
       </div>

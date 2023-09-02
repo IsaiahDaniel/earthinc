@@ -1,24 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
-@import url('https://fonts.cdnfonts.com/css/brightwall-personal-use');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+@import url("https://fonts.cdnfonts.com/css/brightwall-personal-use");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Your other styles */
-
-img {
-  /* width: 100px;
-  height: 100px; */
-  transition: transform 0.3s ease, z-index 0.3s ease;
-  z-index: 1; /* Lower z-index for non-focused images */
+.hero-image {
+  width: 450px;
+  height: 450px;
+  transition: transform 0.5s ease;
+  z-index: 1;
 }
 
-img.focused {
-  /* width: 150px; 
-  height: 150px; */
-  z-index: 2; /* Higher z-index for focused image */
-  transform: scale(1.1); /* Scale effect for focused image */
+.hero-image.focused {
+  width: 550px;
+  height: 500px;
+  transform: scale(1.1);
+  z-index: 2;
 }
 
-/* Other styles */
+/* Center the images */
+.hidden.md\:flex.justify-center.items-center.gap-6.py-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  padding-top: 10px;
+}
