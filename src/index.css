@@ -5,7 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.hero-image {
+/* .hero-image {
   width: 450px;
   height: 450px;
   transition: transform 0.5s ease;
@@ -19,11 +19,25 @@
   z-index: 2;
 }
 
-/* Center the images */
 .hidden.md\:flex.justify-center.items-center.gap-6.py-4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 10px; */
+  gap: 10px;
   padding-top: 10px;
+} */
+
+
+img {
+  /* width: 100px;
+  height: 100px; */
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  z-index: 1; /* Lower z-index for non-focused images */
+}
+
+img.focused {
+  /* width: 150px; 
+  height: 150px; */
+  z-index: 2; /* Higher z-index for focused image */
+  transform: scale(1.1); /* Scale effect for focused image */
 }

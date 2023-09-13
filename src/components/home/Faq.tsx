@@ -40,7 +40,7 @@ const Faq = (props: Props) => {
       <h2 className='text-[32px] md:text-[64px] font-semibold pb-10 font-["Roboto"]'>FAQ</h2>
       <div className='w-full md:w-[90%] mx-auto'>
         {faq.map((item, i) => (
-            <Accordion open={open === item.id} icon={item.id === open ? <FaRegWindowMinimize/> : <FaPlus/>} animate={customAnimation}>
+            <Accordion open={open === item.id} key={i} icon={item.id === open ? <FaRegWindowMinimize/> : <FaPlus/>} animate={customAnimation}>
               <AccordionHeader onClick={() => handleOpen(item.id)} className='bg-[#9D5FED] text-[#fff] text-sm md:text-base px-4 py-4 md:px-12 md:py-8'>
                   {item.question}
               </AccordionHeader>
@@ -52,7 +52,7 @@ const Faq = (props: Props) => {
       </div>
       <img src={innerBg} alt="" className='absolute bottom-0 top-5 -z-10 hidden md:block' />
     </div>
-  )
+  );
 }
 
 export default Faq
