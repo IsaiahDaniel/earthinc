@@ -52,7 +52,7 @@ const navbar = ({ logo, fontColor }: Props) => {
       </div>
       {showNav && (
         <ul
-          className={`flex flex-col justify-center items-center w-full absolute gap-5 py-5 z-10 font-semibold bg-white text-[#1E0734]`}
+          className={`flex flex-col justify-center items-center h-screen w-full absolute gap-5 py-5 z-10 font-semibold bg-white text-[#1E0734]`}
         >
           {navList.map((nav) => (
             <Link to={nav.link} key={nav.name}>
