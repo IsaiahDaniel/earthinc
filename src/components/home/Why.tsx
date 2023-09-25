@@ -2,14 +2,34 @@ import Marquee from "react-fast-marquee";
 import {circledImg} from '../../assets/home'
 import Button from '../global/Button';
 
+import Why1 from '../../assets/home/why-1.png';
+import Why2 from '../../assets/home/why-2.png';
+import Why3 from '../../assets/home/why-3.png';
+import Why4 from '../../assets/home/why-4.png';
 
 type Props = {}
 
 const reasons = [
-  {title : 'Reason one goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
-  {title : 'Reason two goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
-  {title : 'Reason three goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
-  {title : 'Reason four goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+  {
+    title : 'Find your tribe', 
+    description: 'Connect with like-minded individuals who share your passion for art and creativity. As an Earthling, you\'ll be part of a global community that celebrates diversity, collaboration, and artistic expression',
+    image: Why1,
+  },
+  {
+    title : 'Empower your creativity', 
+    description: 'Earth provides a supportive and nurturing environment for artists to unleash their creative potential. Gain access to resources, workshops, and mentorship opportunities designed to help you grow as an artist and reach your full potential.',
+    image: Why2
+  },
+  {
+    title : 'Make a Difference', 
+    description: 'By joining Earth, you\'re not just becoming a part of an art community; you\'re also contributing to a movement that seeks to transform the art world for the better. Be a hero and help shape the future of art.',
+    image: Why3,
+  },
+  {
+    title : 'A World of Possibilities', 
+    description: 'Earth harnesses the power of technology to create a seamless and stress-free experience for both artists and buyers. Stay ahead of the curve and embrace the future of art with Earth.',
+    image: Why4,
+  },
 ]
 
 const Why = (props: Props) => {
@@ -32,7 +52,7 @@ const Why = (props: Props) => {
             {reasons.map((reason, index) => (
               <div key={index} className='p-[3px]' style={{background:'linear-gradient(#EA6EE7 100%, #FD68E3 100%, #B66FFA 100%, #7668FD 100%, #7D2AE7 100% )'}}>
                 <div className='flex flex-col gap-4 lg:gap-10 py-10 px-10 lg:px-20' style={{background:'linear-gradient(137.47deg, #AB54FD 0%, #260742 104.69%)'}}>
-                  <img src={circledImg} alt="" className='w-[20%] h-[20%] self-end' />
+                  <img src={reason.image} alt="" className='w-[20%] h-[20%] self-end' />
                   <h4 className='lg:text-4xl font-medium'>{reason.title}</h4>
                   <p className='font-["Roboto"] lg:text-2xl'>{reason.description}</p>
                 </div>

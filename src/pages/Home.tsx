@@ -13,11 +13,11 @@ const Home = (props: Props) => {
       <Why/>
       <Partners/>
       <Values/>
-      <Team/>
+      {/* <Team/> */}
       <Faq/>
       <Footer/>
     </>
   )
 }
 
-export default Home
+export default Home;

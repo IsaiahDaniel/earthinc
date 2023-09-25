@@ -202,6 +202,10 @@ import { heroImg1, heroImg2, heroImg3, arrow, vidoe } from "../../assets/home";
 import Button from "../global/Button";
 import { Carousel } from "@material-tailwind/react";
 
+import HomeImgOne from "../../assets/home/homeImg-1.png";
+import HomeImgTwo from "../../assets/home/homeImg-2.png";
+import HomeImgThree from "../../assets/home/homeImg-3.png";
+
 type Props = {};
 
 const About = (props: Props) => {
@@ -211,7 +215,9 @@ const About = (props: Props) => {
   //   setFocusedImage(image);
   // };
 
-  const images = [heroImg1, heroImg2, heroImg3];
+  // const images = [heroImg1, heroImg2, heroImg3];
+  const images = [HomeImgTwo, HomeImgOne, HomeImgThree];
+  
   const [focusedImageIndex, setFocusedImageIndex] = useState(0);
 
   useEffect(() => {
