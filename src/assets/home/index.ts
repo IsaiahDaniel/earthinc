@@ -1,13 +1,14 @@
-export {default as logo} from './logo.svg'
-export {default as menu} from './menu.svg'
-export {default as heroImg1} from './hero-img1.svg'
-export {default as heroImg2} from './hero-img2.svg'
-export {default as heroImg3} from './hero-img3.svg'
-export {default as arrow} from './arrow.svg'
-export {default as vidoe} from './vidoe-img.svg'
-export {default as circledImg} from './circled-img.svg'
-export {default as artCard} from './art-card.svg'
-export {default as artCard1} from './art-card1.svg'
-export {default as artCard2} from './art-card2.svg'
-export {default as footerLogo} from './logo-footer.svg'
-export {default as innerBg} from './inner-bg.svg'
+export { default as logo } from "./logo.svg";
+export { default as menu } from "./menu.svg";
+export { default as closeMenu } from "./closeMenu.svg";
+export { default as heroImg1 } from "./hero-img1.svg";
+export { default as heroImg2 } from "./hero-img2.svg";
+export { default as heroImg3 } from "./hero-img3.svg";
+export { default as arrow } from "./arrow.svg";
+export { default as vidoe } from "./vidoe-img.svg";
+export { default as circledImg } from "./circled-img.svg";
+export { default as artCard } from "./art-card.svg";
+export { default as artCard1 } from "./art-card1.svg";
+export { default as artCard2 } from "./art-card2.svg";
+export { default as footerLogo } from "./logo-footer.svg";
+export { default as innerBg } from "./inner-bg.svg";
