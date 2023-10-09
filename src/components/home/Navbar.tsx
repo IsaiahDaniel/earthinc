@@ -13,7 +13,7 @@ type Props = {
 const navList = [
 	{ name: "About", link: "/" },
 	{ name: "Roadmap", link: "/roadmap" },
-	{ name: "FAQs", link: "/" },
+	{ name: "FAQs", link: "/#faq" },
 	{ name: "App Launch", link: "/" },
 ];
 
