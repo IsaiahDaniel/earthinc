@@ -14,45 +14,44 @@ const Partners = (props: Props) => {
 
   const PARTNERS = [
     {
-      name: "partnerships",
+      name: "Partnerships",
       content: {
-        title: "Partnerships",
+        title: "We’re open to partnerships and collaborations ",
         description:
-          "Talk about what we aim to achieve with this community 2 to 3 points are okay",
+          "To discuss partnership and discover how we can elevate the art experience together, please reach out to our team in the contact section. We look forward to collaborating with you and transforming the art world as we know it.",
       },
     },
     {
       name: "Nft marketplace",
       content: {
-        title: "NFT Marketplace",
+        title: "Coming soon",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+          "Our platform provides a diverse range of NFTs for purchase, enabling artists to strategically organize and market their digital collections.",
       },
     },
     {
       name: "Community",
       content: {
-        title: "Community",
+        title: "Discover the Earth Community: A Revolution in the Art World",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+          "Our community shines a spotlight on emerging and established artists alike, ensuring their voices are heard and their creations find the perfect audience.",
       },
     },
     {
       name: "Metaverse",
       content: {
-        title: "Metaverse",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        title: "To be announced",
+        description: "Stay tuned on our Discord.",
       },
     },
-    {
-      name: "Enora",
-      content: {
-        title: "Enora",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-      },
-    },
+    // {
+    //   name: "Enora",
+    //   content: {
+    //     title: "Enora",
+    //     description:
+    //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    //   },
+    // },
   ];
 
   const [partners, setPartners] = useState(PARTNERS);
@@ -67,20 +66,20 @@ const Partners = (props: Props) => {
   const [selectIndex, setSelectIndex] = useState(2);
 
   const handleNext = () => {
-      if(selectIndex === 4){
-        setSelectIndex(0);
-    }else {
-        setSelectIndex(selectIndex + 1);
+    if (selectIndex === 4) {
+      setSelectIndex(0);
+    } else {
+      setSelectIndex(selectIndex + 1);
     }
-  }
+  };
 
   const handlePrev = () => {
-    if(selectIndex === 0){
-        setSelectIndex(1);
-    }else {
-        setSelectIndex(selectIndex - 1);
+    if (selectIndex === 0) {
+      setSelectIndex(1);
+    } else {
+      setSelectIndex(selectIndex - 1);
     }
-  }
+  };
 
   return (
     <div
@@ -120,28 +119,18 @@ const Partners = (props: Props) => {
           <div className="md:hidden flex flex-row items-center list-none" key={index}>
             {selectIndex === index && (
               <div className="flex justify-between">
-                <AiOutlineArrowLeft
-                  color="#fff"
-                  size={40}
-                  onClick={handlePrev}
-                />
+                <AiOutlineArrowLeft color="#fff" size={40} onClick={handlePrev} />
                 <li
                   key={index}
                   className={`text-[#FAF9FF] px-3 cursor-pointer ${
                     index === 2
                       ? "lg:bg-[#7D2AE7] text-[#FAF9FF] rounded-xl px-3 py-2 font-['Brightwall Personal Use']"
-                      : `text-[#FAF9FF] opacity-${
-                          Math.abs(2 - index) * 25
-                        } px-3`
+                      : `text-[#FAF9FF] opacity-${Math.abs(2 - index) * 25} px-3`
                   }`}
                 >
                   {partner.name}
                 </li>
-                <AiOutlineArrowRight
-                  color="#fff"
-                  size={40}
-                  onClick={handleNext}
-                />
+                <AiOutlineArrowRight color="#fff" size={40} onClick={handleNext} />
               </div>
             )}
           </div>
