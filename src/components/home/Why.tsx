@@ -38,7 +38,7 @@ const reasons = [
 
 const Why = (props: Props) => {
 	return (
-		<div className="mt-96 lg:my-10">
+		<div className="mt-12 lg:my-10">
 			<div className="flex">
 				<div
 					className="w-[100px] h-[50px] lg:w-[303px] lg:h-[90px]"
