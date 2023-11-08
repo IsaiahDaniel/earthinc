@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import { footerLogo } from "../../assets/home";
 
 const socials = [
-	{ name: "Twitter", link: "https://twitter.com" },
-	{ name: "Discord", link: "https://twitter.com" },
-	{ name: "Facebook", link: "https://facebook.com" },
-	{ name: "Youtube", link: "https://youtube.com" },
-	{ name: "Instagram", link: "https://instagram.com" },
-	{ name: "Tiktok", link: "https://tiktok.com" },
-	{ name: "Kingschat", link: "https://tiktok.com" },
-];
+  {name: 'Twitter', link: 'https://x.com/earthinc_?t=dnOTDhUDPPo-nmEGEzz3OQ&s=09'},
+  {name: 'Discord', link: "https://discord.gg/8w2DfSDDRV"},
+  {name: 'Facebook', link: 'https://facebook.com'},
+  {name: 'Youtube', link: 'https://www.youtube.com/@earthinc_'},
+  {name: 'Instagram', link: 'https://instagram.com/earthinc_?igshid=MzRlODBiNWFlZA=='},
+  {name: 'Kingschat', link: 'https://kingschat.online/user/earthinc_'},
+  {name: 'Tiktok', link: 'https://www.tiktok.com/@earthinc_?_t=8fykoPH84BR&_r=1'},
+]
 
 type Props = {};
 
